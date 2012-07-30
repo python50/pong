@@ -2,6 +2,10 @@
 ./bin
 ./obj
 
+#automatic docs and error logs
+./docs/html/
+error.log
+
 # Compiled Object files
 *.slo
 *.lo

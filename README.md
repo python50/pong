@@ -7,11 +7,11 @@
 > Debain/Ubuntu currently lack a plain old PONG game. I decided to take the
 > opportunity to create one !
 
-## News
+### News
 
 7/30/2012 - added git repository
 
-## License
+### License
 
 This project is licensed under the GNU GPLv3, See LICENCE for details
 
