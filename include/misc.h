@@ -1,13 +1,37 @@
-/**
- ** Code Copyright (C) 2011 Jason White <whitewaterssoftwareinfo@gmail.com>
- **                         White Waters Software - wwsoft.co.cc
- **
- ** Copying and distributing this source is prohibited without
- ** explicit authorization by the copyright holder: Jason White
- **/
-
 #ifndef MISC_H_INCLUDED
 #define MISC_H_INCLUDED
+
+/**
+ * @file
+ * @author  Jason White <jason@jswhite.net> <whitewaterssoftwareinfo@gmail.com>
+ * @version 1.0
+ *
+ * @section LICENSE
+ *
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ *
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ *
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see http://www.gnu.org/licenses/.
+ *
+ * @section DESCRIPTION
+ *
+ *
+ */
+
+// C library includes
+
+// library includes
+
+// project includes
 
 #include <sstream>
 
