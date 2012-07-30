@@ -60,12 +60,39 @@ class controller
         virtual void unpause();
         virtual ~controller();
 
+
+        std::string get_id()
+        {
+            return id_type;
+        }
+
+        void set_id(std::string id)
+        {
+            id_type=id;
+        }
+
+        bool get_delete()
+        {
+            return delete_this;
+        }
+
+        void set_delete(bool value)
+        {
+            delete_this=value;
+        }
+
         bool delete_this;
         bool persistant;
         bool no_collide;
         SDL_Rect rect;
         std::string id_type;
-        float z;
+        float x,y,z;
+
+        //default values
+
+        const static bool default_x=0;
+        const static bool default_y=0;
+        const static bool default_z=0;
 
     protected:
     private:

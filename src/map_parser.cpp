@@ -43,8 +43,6 @@ extern "C"
 #include "map_parser.h"
 #include "lua_object.h"
 #include "tile.h"
-#include "ship.h"
-#include "astroid.h"
 #include "misc.h"
 #include "text.h"
 #include "text_menu.h"
@@ -345,48 +343,6 @@ void map_parser::parse_object(int layer_number,int index,float layer_z)
 
         gm_engine->add_object(new tile(gm_engine, x*1, y*1, z, image_name));
 
-    }
-
-    if (object_type=="astroid")
-    {
-        controller * ast=new astroid(gm_engine, x*1, y*1);
-        gm_engine->add_object(ast);
-
-        lua_pushstring(L,"properties");
-        lua_gettable(L,-2);
-        //
-        float number;
-        lua_pushstring(L,"speed");
-        lua_gettable(L,-2);
-
-        if (lua_isnumber(L,-1))
-        {
-            ast->set("speed",number=lua_tonumber(L,-1));
-        }
-
-        lua_pop(L,1);
-        //
-        lua_pushstring(L,"angle");
-        lua_gettable(L,-2);
-
-        if (lua_isnumber(L,-1))
-        {
-            ast->set("angle",number=lua_tonumber(L,-1));
-        }
-
-        lua_pop(L,1);
-        //
-        lua_pushstring(L,"mass");
-        lua_gettable(L,-2);
-
-        if (lua_isnumber(L,-1))
-        {
-            ast->set("mass",number=lua_tonumber(L,-1));
-        }
-
-        lua_pop(L,1);
-        //
-        lua_pop(L,1);
     }
 
     if (object_type=="text")

@@ -7,8 +7,8 @@ would like it under a diffrent licence I'd love to hear from you
 Jason White
 Email: Jason@JSWhite.net
 
->Header:
->
+Header:
+
 > PONG - The open source pong clone
 > Copyright (C) 2012 Jason White
 
@@ -24,6 +24,8 @@ Email: Jason@JSWhite.net
 >
 > You should have received a copy of the GNU General Public License
 > along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+GNU GPL:
 
 >Preamble:
 >

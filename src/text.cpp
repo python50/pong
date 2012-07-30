@@ -119,9 +119,9 @@ void text::get(std::string item, int &return_value)
         return_value=font_bgcolor.blue;
 
     if (item=="lines")
-    ;
+        return_value=lines;
     if (item=="size")
-    ;
+        return_value=size;
 }
 
 void text::get(std::string item, float &return_value)
@@ -227,14 +227,14 @@ std::vector<std::string> text::process_text(std::string text_)
     int position=0;
     unsigned int nlines=0;
 
-    position=text_.find("##");
+    position=text_.find(newline_symbol);
 
     while(position!=-1)
     {
         nlines++;
         new_text.push_back(text_.substr(0,position));
-        text_=text_.substr(position+2,text_.size()-(position+1));
-        position=text_.find("##");
+        text_=text_.substr(position+newline_symbol_length,text_.size()-(position+1));
+        position=text_.find(newline_symbol);
     }
 
     //no newlines

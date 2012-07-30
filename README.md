@@ -13,7 +13,11 @@
 
 ### License
 
-This project is licensed under the GNU GPLv3, See LICENCE for details
+This project is licensed under the GNU GPLv3, See LICENCE.md for details
+
+### Credits, libraries used, etc.
+
+See CREDITS.md
 
 ### Contact Me
 Found a bug, got a patch, or perhaps you have a suggestion ?
