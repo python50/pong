@@ -53,14 +53,11 @@
 		<Unit filename="include/game_math.h" />
 		<Unit filename="include/game_object.h" />
 		<Unit filename="include/lua_object.h" />
-		<Unit filename="include/main.h" />
 		<Unit filename="include/map_parser.h" />
 		<Unit filename="include/message_log.h" />
 		<Unit filename="include/misc.h" />
 		<Unit filename="include/player_paddle.h" />
 		<Unit filename="include/pong_ball.h" />
-		<Unit filename="include/ship.h" />
-		<Unit filename="include/shot.h" />
 		<Unit filename="include/text.h" />
 		<Unit filename="include/text_menu.h" />
 		<Unit filename="include/tile.h" />
@@ -226,7 +223,6 @@
 		<Unit filename="src/misc.cpp" />
 		<Unit filename="src/player_paddle.cpp" />
 		<Unit filename="src/pong_ball.cpp" />
-		<Unit filename="src/shot.cpp" />
 		<Unit filename="src/text.cpp" />
 		<Unit filename="src/text_menu.cpp" />
 		<Unit filename="src/tile.cpp" />

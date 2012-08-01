@@ -40,29 +40,46 @@
 main_menu_ui::main_menu_ui(game_engine * gm_engine_)
 {
     gm_engine=gm_engine_;
-    menu=new text_menu(gm_engine,"main-menu",10,100,46,"jura_bold-34","cursor-48",0,1);
+
+    start_text=
+"This is a DEMO Of the WWSiGE Engine\n\
+\n\
+This particular DEMO is a CLONE of the\n\
+GAME \"PONG\". If you are not familiar with\n\
+\"PONG\", Why are you here ?\n\
+\n\
+--- CONTROLS ---\n\
+  UP - Player 0 Up\n\
+  W - Player 1 Up\n\
+  DOWN - Player 0 Down\n\
+  S - Player 1 Down\n\
+\n\
+--- About ---\n\
+  By Jason White\n\
+  As a Coding Demo";
+
+    help_text=
+"Help Screen\n\
+!!!";
+
+    options_text=
+"Options Screen !!!";
+
+    about_text=
+"This game was written by Jason White\n\
+initally as a coding demo for a friend";
+
+    quit_text=
+"Quit screen";
+
+    menu=new text_menu(gm_engine,"main-menu",5,100,46,"jura_bold-34","cursor-48",0,1);
 
     gm_engine->add_object(new text(gm_engine, "copyright-text", 0, 0, "jura_medium-12",
-"Copyright 2012 (C) Jason White##\
-V0.11 - 5/28/2012##\
+"Copyright 2012 (C) Jason White\n\
+V0.12 - 8/1/2012\n\
 Development", 1));
     gm_engine->add_object(new text(gm_engine, "title-text", 150, 50, "jura_bold-48","PONG",1));
-    gm_engine->add_object(new text(gm_engine, "info-text", 150, 100, "jura_medium-24",
-"This is a DEMO Of the WWSiGE Engine##\
-##\
-This particular DEMO is a CLONE of the##\
-GAME \"PONG\". If you are not familiar with##\
-\"PONG\", Why are you here ?##\
-##\
---- CONTROLS ---##\
-  UP - Player 0 Up##\
-  W - Player 1 Up##\
-  DOWN - Player 0 Down##\
-  S - Player 1 Down##\
-##\
---- About ---##\
-  By Jason White##\
-  As a Coding Demo", 1));
+    gm_engine->add_object(new text(gm_engine, "info-text", 165, 100, "jura_medium-24", start_text, 1));
     int value=0;
     gm_engine->get_object("info-text")->set("font_red",value);
     gm_engine->get_object("info-text")->set("font_blue",value);
@@ -88,12 +105,14 @@ GAME \"PONG\". If you are not familiar with##\
 
     std::string mtext;
     menu->call("push_back",mtext="Start");
+    menu->call("push_back",mtext="Help");
+    menu->call("push_back",mtext="Options");
+    menu->call("push_back",mtext="About");
     menu->call("push_back",mtext="Quit");
 
     gm_engine->add_object(menu);
 
     background=gm_engine->get_surface("background-circuit");
-    //foreground=gm_engine->get_surface("background-space0");
 
     width=8;
     height=7;
@@ -104,6 +123,7 @@ GAME \"PONG\". If you are not familiar with##\
 
     if (gm_engine->music_get_playing()==0)
         gm_engine->music_play("startup",-1);
+
 
 }
 
@@ -119,6 +139,86 @@ void main_menu_ui::create_game()
 
     gm_engine->game_init();
 
+}
+
+void main_menu_ui::set_screen_text(int selected)
+{
+    if (selected==0)
+    {
+        //start
+        string text=start_text;
+        gm_engine->get_object("info-text")->set("text", text);
+
+        return;
+    }
+    else if (selected==1)
+    {
+        //help
+        string text=help_text;
+        gm_engine->get_object("info-text")->set("text", text);
+
+        return;
+    }
+    else if (selected==2)
+    {
+        //options
+        string text=options_text;
+        gm_engine->get_object("info-text")->set("text", text);
+        return;
+    }
+    else if (selected==3)
+    {
+        //about
+        string text=about_text;
+        gm_engine->get_object("info-text")->set("text", text);
+        return;
+    }
+    else if (selected==4)
+    {
+        //quit
+        string text=quit_text;
+        gm_engine->get_object("info-text")->set("text", text);
+        return;
+    }
+    else
+    {
+        new message_log(MESSAGE_DEBUG4,"main_menu_ui: menu selection out of range `"+convert_int_string(selected)+"`");
+    }
+}
+
+void main_menu_ui::do_menu_item(int selected)
+{
+    if (selected==0)
+    {
+        //start
+        create_game();
+        return;
+    }
+    else if (selected==1)
+    {
+        //Help
+        return;
+    }
+    else if (selected==2)
+    {
+        //Options
+        return;
+    }
+    else if (selected==3)
+    {
+        //About
+        return;
+    }
+    else if (selected==4)
+    {
+        //Quit
+        gm_engine->music_stop();
+        gm_engine->quit();
+    }
+    else
+    {
+        new message_log(MESSAGE_DEBUG4,"main_menu_ui: menu selection out of range `"+convert_int_string(selected)+"`");
+    }
 }
 
 void main_menu_ui::update()
@@ -155,40 +255,28 @@ void main_menu_ui::update()
             int selection=-1;
             menu->call("select",selection);
             gm_engine->sound_play("menu_ding");
+
+            menu->get("selected",selection);
+            set_screen_text(selection);
         }
         else if (keystate[SDLK_DOWN])
         {
             int selection=-2;
             menu->call("select",selection);
             gm_engine->sound_play("menu_ding");
+
+            menu->get("selected",selection);
+            set_screen_text(selection);
         }
 
         if (keystate[SDLK_SPACE] || keystate[SDLK_RETURN] )
         {
-            int selected;
-            menu->get("selected", selected=0);
-
-            if (selected==0)
-            {
-                new message_log(MESSAGE_DEBUG4,"main_menu_ui: start");
-                create_game();
-                return;
-            }
-            else if (selected==1)
-            {
-                new message_log(MESSAGE_DEBUG4,"main_menu_ui: quit");
-                gm_engine->music_stop();
-                gm_engine->quit();
-            }
-            else
-            {
-                new message_log(MESSAGE_DEBUG4,"main_menu_ui: menu selection out of range `"+convert_int_string(selected)+"`");
-            }
+            int selection;
+            menu->get("selected",selection);
+            do_menu_item(selection);
         }
 
     }
-
-    //gm_engine->blit(0,0,foreground,BLIT_ABSOLUTE);
 }
 
 main_menu_ui::~main_menu_ui()

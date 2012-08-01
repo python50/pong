@@ -48,6 +48,8 @@ class main_menu_ui : public controller
     protected:
     private:
         void create_game();
+        void set_screen_text(int position);
+        void do_menu_item(int position);
         game_engine * gm_engine;
 
         text_menu * menu;
@@ -63,6 +65,13 @@ class main_menu_ui : public controller
 
         int counter;
         bool direction;
+
+        char * start_text;
+        char * help_text;
+        char * options_text;
+        char * about_text;
+        char * quit_text;
+
 };
 
 #endif // MAIN_MENU_UI_H

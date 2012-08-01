@@ -58,7 +58,7 @@ void game_engine::game_logic_start()
 
     if (gameplay.counter==0)
     {
-        controller * start_text=new text(this, "start-text",320,200,"jura_bold-48", "GET READY !##SCORE LIMIT: "+convert_int_string(gameplay.score_limit));
+        controller * start_text=new text(this, "start-text",320,200,"jura_bold-48", "GET READY !\nSCORE LIMIT: "+convert_int_string(gameplay.score_limit));
         int value;
         start_text->set("font_red",value=0);
         start_text->set("font_green",value=0xff);
@@ -151,7 +151,7 @@ void game_engine::game_logic_win0()
 {
     if (gameplay.counter==0)
     {
-        controller * win_text=new text(this, "win-text",320,200,"jura_bold-48", "PLAYER 1 WINS##PRESS ENTER");
+        controller * win_text=new text(this, "win-text",320,200,"jura_bold-48", "PLAYER 1 WINS\nPRESS ENTER");
         int value;
         win_text->set("font_red",value=0);
         win_text->set("font_green",value=0xff);
@@ -193,7 +193,7 @@ void game_engine::game_logic_win1()
 {
     if (gameplay.counter==0)
     {
-        controller * win_text=new text(this, "win-text",320,200,"jura_bold-48", "PLAYER 0 WINS##PRESS ENTER");
+        controller * win_text=new text(this, "win-text",320,200,"jura_bold-48", "PLAYER 0 WINS\nPRESS ENTER");
         int value;
         win_text->set("font_red",value=0);
         win_text->set("font_green",value=0xff);
