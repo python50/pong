@@ -5,7 +5,7 @@
  *
  * @section LICENSE
  *
- * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White, White Waters Software
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -55,7 +55,7 @@ Include Template
 #include "message_log.h"
 #include "misc.h"
 #include "game_engine.h"
-
+#include "text.h"
 
 int main()
 {
@@ -100,6 +100,17 @@ int main()
             counter=0;
             printf("fps: %f (%f)\n", fps_average, fps);
         }
+/*
+        controller * fps_text = engine->get_object("fps-text");
+        if (fps_text==NULL)
+        {
+            fps_text=new text(engine,"fps-text",0,0,"jura_medium-18","",BLIT_ABSOLUTE);
+            engine->add_object(fps_text);
+        }
+
+        string text=convert_int_string(fps_average);
+        fps_text->set("text",text);*/
+
     }
 
     new message_log(MESSAGE_EVENT,"WWSiGE Closed");

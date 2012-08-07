@@ -5,7 +5,7 @@
  *
  * @section LICENSE
  *
- * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White, White Waters Software
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -161,7 +161,7 @@ void pong_ball::collision()
         counter=0;
         gm_engine->sound_play("beep1");
 
-        float difference=((y)-(paddle_y)); //Need resolution scalling
+        float difference=((y)-(paddle_y))*1.25; //Need resolution scalling
 
         vector.angle=gmath_direction(vector.x,vector.y,0,0)/M_PI*180+difference;
     }

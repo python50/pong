@@ -5,7 +5,7 @@
  *
  * @section LICENSE
  *
- * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White, White Waters Software
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -42,35 +42,73 @@ main_menu_ui::main_menu_ui(game_engine * gm_engine_)
     gm_engine=gm_engine_;
 
     start_text=
-"This is a DEMO Of the WWSiGE Engine\n\
+"Welcome to PONG the open source\n\
+PONG clone.\n\
 \n\
-This particular DEMO is a CLONE of the\n\
-GAME \"PONG\". If you are not familiar with\n\
-\"PONG\", Why are you here ?\n\
+Press Enter To Start\n\
 \n\
---- CONTROLS ---\n\
-  UP - Player 0 Up\n\
-  W - Player 1 Up\n\
-  DOWN - Player 0 Down\n\
-  S - Player 1 Down\n\
 \n\
---- About ---\n\
-  By Jason White\n\
-  As a Coding Demo";
+\n\
+\n\
+\n\
+\n\
+--- Project Page --- Get the source at:\n\
+github.com/python50/pong\n\
+\n\
+--- Like the game ? ---\n\
+Let me know at Jason@JSWhite.net";
 
     help_text=
-"Help Screen\n\
-!!!";
+"--- Controls ---\n\
+Keyboard:\n\
+  --- Player 0 (Left) ---\n\
+    UP     - Player 0 Up\n\
+    DOWN - Player 0 Down\n\
+  --- Player 1 (Right) ---\n\
+    W     - Player 1 Up\n\
+    S      - Player 1 Down\n\
+\n\
+Joysticks are also supported\n\
+Simply add them before you start\n\
+the game, joystick input will be\n\
+enabled upon the detection of one\n\
+or more input devices";
 
     options_text=
-"Options Screen !!!";
+"--- Options ---\n\
+You can't set options here.\n\
+Better luck next release ...\n\
+\n\
+--- Input Modes ---\n\
+    Player 0 -\n\
+    Player 1  -\n\
+--------------------------\n\
+Settings in config.lua\n\
+--------------------------\n\
+Video: 640x480\n\
+Fullscreen:\n\
+Double Buffer:\n\
+Sound Volume -\n\
+Music Volume  -";
 
     about_text=
-"This game was written by Jason White\n\
-initally as a coding demo for a friend";
+"--- About PONG 0.12 ----\n\
+This game was written by Jason White -initially\n\
+as a coding demo for a friend. Since then,\n\
+it has matured into a open source project.\n\
+\n\
+All code, graphics, and sound effects:\n\
+        Copyright (C) 2012 Jason White,\n\
+        White Waters Software\n\
+        All Rights Reserved.\n\
+Source code ONLY:\n\
+        Released under the GPLv3 License\n\
+Music by a varity of people including:\n\
+        gr0gg0, lemonade, maxuser6000, CrizZ,\n\
+        rhodes, demosausje, Steam, Elwood";
 
     quit_text=
-"Quit screen";
+"Leaving so soon ?";
 
     menu=new text_menu(gm_engine,"main-menu",5,100,46,"jura_bold-34","cursor-48",0,1);
 
@@ -148,6 +186,8 @@ void main_menu_ui::set_screen_text(int selected)
         //start
         string text=start_text;
         gm_engine->get_object("info-text")->set("text", text);
+        text="jura_medium-24";
+        gm_engine->get_object("info-text")->set("font", text);
 
         return;
     }
@@ -156,7 +196,8 @@ void main_menu_ui::set_screen_text(int selected)
         //help
         string text=help_text;
         gm_engine->get_object("info-text")->set("text", text);
-
+        text="jura_medium-24";
+        gm_engine->get_object("info-text")->set("font", text);
         return;
     }
     else if (selected==2)
@@ -164,6 +205,8 @@ void main_menu_ui::set_screen_text(int selected)
         //options
         string text=options_text;
         gm_engine->get_object("info-text")->set("text", text);
+        text="jura_medium-24";
+        gm_engine->get_object("info-text")->set("font", text);
         return;
     }
     else if (selected==3)
@@ -171,6 +214,8 @@ void main_menu_ui::set_screen_text(int selected)
         //about
         string text=about_text;
         gm_engine->get_object("info-text")->set("text", text);
+        text="jura_medium-18";
+        gm_engine->get_object("info-text")->set("font", text);
         return;
     }
     else if (selected==4)
@@ -178,6 +223,8 @@ void main_menu_ui::set_screen_text(int selected)
         //quit
         string text=quit_text;
         gm_engine->get_object("info-text")->set("text", text);
+        text="jura_medium-24";
+        gm_engine->get_object("info-text")->set("font", text);
         return;
     }
     else

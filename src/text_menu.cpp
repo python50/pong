@@ -5,7 +5,7 @@
  *
  * @section LICENSE
  *
- * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White, White Waters Software
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -264,7 +264,8 @@ void text_menu::get(std::string item, float &return_value)
 
 void text_menu::get(std::string item, std::string &return_value)
 {
-
+    if (item=="font")
+        return_value=font;
 }
 
 void text_menu::set(std::string item, bool &value)
@@ -306,7 +307,8 @@ void text_menu::set(std::string item, float &value)
 
 void text_menu::set(std::string item, std::string &value)
 {
-
+    if ( item=="font" )
+        font=value;
 }
 
 void text_menu::update()

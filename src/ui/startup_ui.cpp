@@ -5,7 +5,7 @@
  *
  * @section LICENSE
  *
- * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White, White Waters Software
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -50,17 +50,17 @@ startup_ui::startup_ui(game_engine * gm_engine_)
 void startup_ui::update()
 {
     counter++;
-    if (counter > 6)
+    if (counter > 60)
     {
         load_next();
         return ;
     }
-    /*Uint8 *keystate = SDL_GetKeyState(NULL);
+    Uint8 *keystate = SDL_GetKeyState(NULL);
     if (keystate[SDLK_SPACE] || keystate[SDLK_RETURN] )
     {
         load_next();
         return ;
-    }*/
+    }
     gm_engine->blit(0,0,background, BLIT_ABSOLUTE);
 }
 

@@ -8,7 +8,7 @@
  *
  * @section LICENSE
  *
- * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White, White Waters Software
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -44,6 +44,7 @@ class startup_splash_ui : public controller
         virtual ~startup_splash_ui();
     protected:
     private:
+        void load_next();
         game_engine * gm_engine;
         wwsige_surface * background;
 

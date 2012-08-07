@@ -5,7 +5,7 @@
  *
  * @section LICENSE
  *
- * PONG - The open source pong clone Copyright (C) 2012 Jason White
+ * PONG - The open source pong clone Copyright (C) 2012 Jason White, White Waters Software
  *
  * This program is free software: you can redistribute it and/or modify it under
  * the terms of the GNU General Public License as published by the Free Software
@@ -123,7 +123,6 @@ bool game_engine::load(int width,int height, bool cursor)
 
     SDL_ShowCursor(cursor);
 
-    load_music("data/music/gurusoul-need.ogg","game-0");
     load_surface("data/image/background/startup.png","background-startup");
     load_surface("data/image/background/splash.png","background-splash");
 

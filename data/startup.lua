@@ -23,17 +23,19 @@ load_sound("data/sound/thud_0.ogg","thud_0");
 load_sound("data/sound/menu_ding.ogg","menu_ding");
 
 --- Music ---
---load_music("data/music/sweetdream.xm","startup");
---load_music("data/music/ramon.mod","game_play");
---load_music("data/music/buss.xm","game_over");
-load_music("data/music/sweetdream.ogg","startup");
-load_music("data/music/ramon.ogg","game_play");
+--load_music("data/music/sweetdream.ogg","startup");
+  load_music("data/music/lime.ogg","startup");
+load_music("data/music/ramon.ogg","game_play_1");
+load_music("data/music/djc_e2p.ogg","game_play");
+load_music("data/music/canon_pour_deux.ogg","game_play_2");
+load_music("data/music/lime.ogg","game_play_3");
 load_music("data/music/buss.ogg","game_over");
 --- Font ---
 
 --Jura
 load_font("data/font/jura/JuraMedium.ttf","jura_medium-8",8);
-load_font("data/font/jura/JuraMedium.ttf","jura_medium-12",14);
+load_font("data/font/jura/JuraMedium.ttf","jura_medium-12",12);
+load_font("data/font/jura/JuraMedium.ttf","jura_medium-18",18);
 load_font("data/font/jura/JuraMedium.ttf","jura_medium-24",24);
 load_font("data/font/jura/JuraMedium.ttf","jura_medium-28",28);
 load_font("data/font/jura/JuraDemiBold.ttf","jura_bold-34",34);

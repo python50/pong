@@ -462,7 +462,7 @@
 	"lopcodes.h"
 	"lundump.h"
 
-1343674693 source:/home/jason/Files/Code/c++/PONG/main.cpp
+1344295475 source:/home/jason/Files/Code/c++/PONG/main.cpp
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
@@ -472,15 +472,16 @@
 	"message_log.h"
 	"misc.h"
 	"game_engine.h"
+	"text.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/config_file.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/config_file.h
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
 	<iostream>
 	"game_engine.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/game_engine.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/game_engine.h
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
@@ -688,22 +689,22 @@
 	"begin_code.h"
 	"close_code.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/game_engine_datatypes.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/game_engine_datatypes.h
 	"SDL.h"
 	"SDL_mixer.h"
 	"SDL_ttf.h"
 	"vector"
 
-1343680327 /home/jason/Files/Code/c++/PONG/include/controller.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/controller.h
 	"game_engine_datatypes.h"
 	<iostream>
 	"SDL.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/message_log.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/message_log.h
 	<stdlib.h>
 	<iostream>
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/misc.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/misc.h
 	<sstream>
 
 1326465968 /usr/include/SDL/SDL_framerate.h
@@ -771,17 +772,17 @@
 	"game_object.h"
 	"game_math.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/game_object.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/game_object.h
 	<controller.h>
 	"game_engine.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/game_math.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/game_math.h
 
 1326465968 /usr/include/SDL/SDL_rotozoom.h
 	<math.h>
 	"SDL.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/config_file.cpp
+1343864992 source:/home/jason/Files/Code/c++/PONG/src/config_file.cpp
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
@@ -790,10 +791,10 @@
 	"config_file.h"
 	"game_engine.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/controller.cpp
+1343864992 source:/home/jason/Files/Code/c++/PONG/src/controller.cpp
 	"controller.h"
 
-1343679809 source:/home/jason/Files/Code/c++/PONG/src/game_engine.cpp
+1344026628 source:/home/jason/Files/Code/c++/PONG/src/game_engine.cpp
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
@@ -861,11 +862,11 @@
 	"message_log.h"
 	<vector>
 
-1343674937 /home/jason/Files/Code/c++/PONG/include/tile.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/tile.h
 	"game_engine.h"
 	"game_object.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/lua_object.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/lua_object.h
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
@@ -874,38 +875,38 @@
 	"message_log.h"
 	"iostream"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/map_parser.h
+1343864991 /home/jason/Files/Code/c++/PONG/include/map_parser.h
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
 	<iostream>
 	"game_engine.h"
 
-1343680151 /home/jason/Files/Code/c++/PONG/include/text.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/text.h
 	<controller.h>
 	<vector>
 	"game_engine.h"
 
-1343674937 /home/jason/Files/Code/c++/PONG/include/text_menu.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/text_menu.h
 	<controller.h>
 	"game_engine.h"
 	"text.h"
 	<vector>
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/ui/startup_ui.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/ui/startup_ui.h
 	<controller.h>
 	"game_engine.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_engine_collision.cpp
+1343864992 source:/home/jason/Files/Code/c++/PONG/src/game_engine_collision.cpp
 	"game_engine.h"
 	"message_log.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_engine_draw.cpp
+1343864992 source:/home/jason/Files/Code/c++/PONG/src/game_engine_draw.cpp
 	"game_engine.h"
 	"message_log.h"
 	"math.h"
 
-1343693661 source:/home/jason/Files/Code/c++/PONG/src/game_engine_gameplay.cpp
+1343864992 source:/home/jason/Files/Code/c++/PONG/src/game_engine_gameplay.cpp
 	"game_engine.h"
 	"message_log.h"
 	"text.h"
@@ -914,25 +915,25 @@
 	"pong_ball.h"
 	"misc.h"
 
-1343674937 /home/jason/Files/Code/c++/PONG/include/player_paddle.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/player_paddle.h
 	<game_engine.h>
 	<controller.h>
 
-1343674937 /home/jason/Files/Code/c++/PONG/include/pong_ball.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/pong_ball.h
 	"game_engine.h"
 	<controller.h>
 	"game_math.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_engine_joystick.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/game_engine_joystick.cpp
 	"game_engine.h"
 	"message_log.h"
 	"misc.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_engine_misc.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/game_engine_misc.cpp
 	"game_engine.h"
 	"message_log.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_engine_resource.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/game_engine_resource.cpp
 	"game_engine.h"
 	"message_log.h"
 	"SDL.h"
@@ -942,7 +943,7 @@
 	"SDL_rotozoom.h"
 	"map_parser.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_engine_sound.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/game_engine_sound.cpp
 	"game_engine.h"
 	"message_log.h"
 	"SDL.h"
@@ -951,26 +952,26 @@
 	"SDL_mixer.h"
 	"SDL_rotozoom.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_engine_view.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/game_engine_view.cpp
 	"game_engine.h"
 	"message_log.h"
 	"math.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_math.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/game_math.cpp
 	"game_math.h"
 	"stdlib.h"
 	"time.h"
 	<iostream>
 	<math.h>
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/game_object.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/game_object.cpp
 	"game_object.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/lua_object.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/lua_object.cpp
 	"lua_object.h"
 	"game_engine.h"
 
-1343679846 source:/home/jason/Files/Code/c++/PONG/src/map_parser.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/map_parser.cpp
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
@@ -986,26 +987,26 @@
 	"main_menu_ui.h"
 	"startup_ui.h"
 
-1343848305 /home/jason/Files/Code/c++/PONG/include/ui/main_menu_ui.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/ui/main_menu_ui.h
 	<controller.h>
 	"game_engine.h"
 	"text_menu.h"
 	"text.h"
 
-1343674819 source:/home/jason/Files/Code/c++/PONG/src/message_log.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/message_log.cpp
 	"message_log.h"
 	<stdlib.h>
 	<stdio.h>
 	<time.h>
 
-1343674819 source:/home/jason/Files/Code/c++/PONG/src/misc.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/misc.cpp
 	"misc.h"
 
-1343674819 source:/home/jason/Files/Code/c++/PONG/src/player_paddle.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/player_paddle.cpp
 	"player_paddle.h"
 	"math.h"
 
-1343674819 source:/home/jason/Files/Code/c++/PONG/src/pong_ball.cpp
+1344027929 source:/home/jason/Files/Code/c++/PONG/src/pong_ball.cpp
 	"pong_ball.h"
 	"math.h"
 
@@ -1027,22 +1028,22 @@
 	"message_log.h"
 	<SDL.h>
 
-1343679882 source:/home/jason/Files/Code/c++/PONG/src/text.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/text.cpp
 	"text.h"
 	"message_log.h"
 	"misc.h"
 
-1343674819 source:/home/jason/Files/Code/c++/PONG/src/text_menu.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/text_menu.cpp
 	"text_menu.h"
 	"message_log.h"
 	"misc.h"
 
-1343674819 source:/home/jason/Files/Code/c++/PONG/src/tile.cpp
+1343864993 source:/home/jason/Files/Code/c++/PONG/src/tile.cpp
 	"tile.h"
 	"message_log.h"
 	"misc.h"
 
-1343847370 source:/home/jason/Files/Code/c++/PONG/src/ui/main_menu_ui.cpp
+1343946974 source:/home/jason/Files/Code/c++/PONG/src/ui/main_menu_ui.cpp
 	"game_math.h"
 	"main_menu_ui.h"
 	"message_log.h"
@@ -1051,16 +1052,16 @@
 	"pong_ball.h"
 	"tile.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/ui/startup_splash_ui.cpp
+1343864994 source:/home/jason/Files/Code/c++/PONG/src/ui/startup_splash_ui.cpp
 	"startup_splash_ui.h"
 	"message_log.h"
 	"SDL_image.h"
 
-1343674936 /home/jason/Files/Code/c++/PONG/include/ui/startup_splash_ui.h
+1343864992 /home/jason/Files/Code/c++/PONG/include/ui/startup_splash_ui.h
 	"game_engine.h"
 	"controller.h"
 
-1343674818 source:/home/jason/Files/Code/c++/PONG/src/ui/startup_ui.cpp
+1343864994 source:/home/jason/Files/Code/c++/PONG/src/ui/startup_ui.cpp
 	"startup_ui.h"
 	"startup_splash_ui.h"
 
