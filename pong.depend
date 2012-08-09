@@ -462,7 +462,7 @@
 	"lopcodes.h"
 	"lundump.h"
 
-1344295475 source:/home/jason/Files/Code/c++/PONG/main.cpp
+1344539697 source:/home/jason/Files/Code/c++/PONG/main.cpp
 	"lua.h"
 	"lualib.h"
 	"lauxlib.h"
@@ -473,6 +473,7 @@
 	"misc.h"
 	"game_engine.h"
 	"text.h"
+	"config_manager.h"
 
 1343864991 /home/jason/Files/Code/c++/PONG/include/config_file.h
 	"lua.h"
@@ -1064,4 +1065,61 @@
 1343864994 source:/home/jason/Files/Code/c++/PONG/src/ui/startup_ui.cpp
 	"startup_ui.h"
 	"startup_splash_ui.h"
+
+1339407224 source:/home/jason/Files/Code/c++/PONG/sqlite/sqlite3.c
+	"config.h"
+	<stdint.h>
+	<inttypes.h>
+	<tcl.h>
+	<stdarg.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<assert.h>
+	<stddef.h>
+	<windows.h>
+	<os2safe.h>
+	<os2.h>
+	<uconv.h>
+	<ctype.h>
+	<time.h>
+	<sys/sysctl.h>
+	<malloc/malloc.h>
+	<libkern/OSAtomic.h>
+	<malloc.h>
+	<pthread.h>
+	<math.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<fcntl.h>
+	<unistd.h>
+	<sys/time.h>
+	<errno.h>
+	<sys/mman.h>
+	<sys/ioctl.h>
+	<semaphore.h>
+	<limits.h>
+	<sys/file.h>
+	<sys/param.h>
+	<sys/mount.h>
+	<utime.h>
+	<dlfcn.h>
+	<sys/cygwin.h>
+	"sqlite3rtree.h"
+	<unicode/utypes.h>
+	<unicode/uregex.h>
+	<unicode/ustring.h>
+	<unicode/ucol.h>
+	<unicode/ubrk.h>
+	<unicode/utf16.h>
+
+1344459377 source:/home/jason/Files/Code/c++/PONG/src/config_manager.cpp
+	"config_manager.h"
+
+1344459456 /home/jason/Files/Code/c++/PONG/include/config_manager.h
+	<iostream>
+	"sqlite3.h"
+
+1339407221 /home/jason/Files/Code/c++/PONG/sqlite/sqlite3.h
+	<stdarg.h>
 

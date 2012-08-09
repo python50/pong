@@ -38,15 +38,19 @@
 			<Add directory="/usr/include/SDL" />
 			<Add directory="src/ui" />
 			<Add directory="include/ui" />
+			<Add directory="/home/jason/Files/Code/c++/PONG/sqlite" />
 		</Compiler>
 		<Linker>
 			<Add option="-lSDL_image" />
 			<Add option="-lSDL_ttf" />
 			<Add option="-lSDL_mixer" />
 			<Add option="`sdl-config --libs`" />
+			<Add option="-lpthread" />
+			<Add option="-ldl" />
 		</Linker>
 		<Unit filename="TODO" />
 		<Unit filename="include/config_file.h" />
+		<Unit filename="include/config_manager.h" />
 		<Unit filename="include/controller.h" />
 		<Unit filename="include/game_engine.h" />
 		<Unit filename="include/game_engine_datatypes.h" />
@@ -204,7 +208,12 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="sdl_gfx/SDL_rotozoom.h" />
+		<Unit filename="sqlite/sqlite3.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="sqlite/sqlite3.h" />
 		<Unit filename="src/config_file.cpp" />
+		<Unit filename="src/config_manager.cpp" />
 		<Unit filename="src/controller.cpp" />
 		<Unit filename="src/game_engine.cpp" />
 		<Unit filename="src/game_engine_collision.cpp" />

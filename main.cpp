@@ -57,8 +57,14 @@ Include Template
 #include "game_engine.h"
 #include "text.h"
 
+#include "config_manager.h"
+
 int main()
 {
+    //config_manager config("settings.sqlite");
+    //cout << config.get_setting_string("foo") << "\n";
+
+
     new message_log(MESSAGE_EVENT,"WWSiGE Loading");
 
     game_engine * engine=new game_engine();
@@ -86,11 +92,9 @@ int main()
         last_tick=SDL_GetTicks();
         run=engine->update();
         SDL_framerateDelay(&manager);
-
         fps=SDL_GetTicks()-last_tick;
         fps/=1000;
         fps=1/fps;
-
         fps_average=(fps_average+fps)/2;
 
         counter++;
@@ -100,7 +104,7 @@ int main()
             counter=0;
             printf("fps: %f (%f)\n", fps_average, fps);
         }
-/*
+
         controller * fps_text = engine->get_object("fps-text");
         if (fps_text==NULL)
         {
@@ -109,7 +113,7 @@ int main()
         }
 
         string text=convert_int_string(fps_average);
-        fps_text->set("text",text);*/
+        fps_text->set("text",text);
 
     }
 
