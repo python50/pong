@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configurationDescriptor version="84">
+  <logicalFolder name="root" displayName="root" projectFiles="true" kind="ROOT">
+    <logicalFolder name="HeaderFiles"
+                   displayName="Header Files"
+                   projectFiles="true">
+      <logicalFolder name="ui" displayName="ui" projectFiles="true">
+        <itemPath>include/ui/main_menu_ui.h</itemPath>
+        <itemPath>include/ui/startup_splash_ui.h</itemPath>
+        <itemPath>include/ui/startup_ui.h</itemPath>
+      </logicalFolder>
+      <itemPath>include/config_file.h</itemPath>
+      <itemPath>include/config_manager.h</itemPath>
+      <itemPath>include/controller.h</itemPath>
+      <itemPath>include/game_engine.h</itemPath>
+      <itemPath>include/game_engine_datatypes.h</itemPath>
+      <itemPath>include/game_math.h</itemPath>
+      <itemPath>include/game_object.h</itemPath>
+      <itemPath>include/lua_object.h</itemPath>
+      <itemPath>include/map_parser.h</itemPath>
+      <itemPath>include/message_log.h</itemPath>
+      <itemPath>include/misc.h</itemPath>
+      <itemPath>include/player_paddle.h</itemPath>
+      <itemPath>include/pong_ball.h</itemPath>
+      <itemPath>include/text.h</itemPath>
+      <itemPath>include/text_menu.h</itemPath>
+      <itemPath>include/tile.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="lua" displayName="lua" projectFiles="true">
+      <itemPath>lua/lapi.c</itemPath>
+      <itemPath>lua/lapi.h</itemPath>
+      <itemPath>lua/lauxlib.c</itemPath>
+      <itemPath>lua/lauxlib.h</itemPath>
+      <itemPath>lua/lbaselib.c</itemPath>
+      <itemPath>lua/lcode.c</itemPath>
+      <itemPath>lua/lcode.h</itemPath>
+      <itemPath>lua/ldblib.c</itemPath>
+      <itemPath>lua/ldebug.c</itemPath>
+      <itemPath>lua/ldebug.h</itemPath>
+      <itemPath>lua/ldo.c</itemPath>
+      <itemPath>lua/ldo.h</itemPath>
+      <itemPath>lua/ldump.c</itemPath>
+      <itemPath>lua/lfs.c</itemPath>
+      <itemPath>lua/lfs.h</itemPath>
+      <itemPath>lua/lfunc.c</itemPath>
+      <itemPath>lua/lfunc.h</itemPath>
+      <itemPath>lua/lgc.c</itemPath>
+      <itemPath>lua/lgc.h</itemPath>
+      <itemPath>lua/linit.c</itemPath>
+      <itemPath>lua/liolib.c</itemPath>
+      <itemPath>lua/llex.c</itemPath>
+      <itemPath>lua/llex.h</itemPath>
+      <itemPath>lua/llimits.h</itemPath>
+      <itemPath>lua/lmathlib.c</itemPath>
+      <itemPath>lua/lmem.c</itemPath>
+      <itemPath>lua/lmem.h</itemPath>
+      <itemPath>lua/loadlib.c</itemPath>
+      <itemPath>lua/lobject.c</itemPath>
+      <itemPath>lua/lobject.h</itemPath>
+      <itemPath>lua/lopcodes.c</itemPath>
+      <itemPath>lua/lopcodes.h</itemPath>
+      <itemPath>lua/loslib.c</itemPath>
+      <itemPath>lua/lparser.c</itemPath>
+      <itemPath>lua/lparser.h</itemPath>
+      <itemPath>lua/lstate.c</itemPath>
+      <itemPath>lua/lstate.h</itemPath>
+      <itemPath>lua/lstring.c</itemPath>
+      <itemPath>lua/lstring.h</itemPath>
+      <itemPath>lua/lstrlib.c</itemPath>
+      <itemPath>lua/ltable.c</itemPath>
+      <itemPath>lua/ltable.h</itemPath>
+      <itemPath>lua/ltablib.c</itemPath>
+      <itemPath>lua/ltm.c</itemPath>
+      <itemPath>lua/ltm.h</itemPath>
+      <itemPath>lua/lua.h</itemPath>
+      <itemPath>lua/luaconf.h</itemPath>
+      <itemPath>lua/lualib.h</itemPath>
+      <itemPath>lua/lundump.c</itemPath>
+      <itemPath>lua/lundump.h</itemPath>
+      <itemPath>lua/lvm.c</itemPath>
+      <itemPath>lua/lvm.h</itemPath>
+      <itemPath>lua/lzio.c</itemPath>
+      <itemPath>lua/lzio.h</itemPath>
+      <itemPath>lua/print.c</itemPath>
+    </logicalFolder>
+    <logicalFolder name="ResourceFiles"
+                   displayName="Resource Files"
+                   projectFiles="true">
+    </logicalFolder>
+    <logicalFolder name="sdl_gfx" displayName="sdl_gfx" projectFiles="true">
+      <itemPath>sdl_gfx/LICENSE</itemPath>
+      <itemPath>sdl_gfx/README</itemPath>
+      <itemPath>sdl_gfx/SDL_framerate.c</itemPath>
+      <itemPath>sdl_gfx/SDL_framerate.h</itemPath>
+      <itemPath>sdl_gfx/SDL_gfxBlitFunc.c</itemPath>
+      <itemPath>sdl_gfx/SDL_gfxBlitFunc.h</itemPath>
+      <itemPath>sdl_gfx/SDL_gfxPrimitives.c</itemPath>
+      <itemPath>sdl_gfx/SDL_gfxPrimitives.h</itemPath>
+      <itemPath>sdl_gfx/SDL_gfxPrimitives_font.h</itemPath>
+      <itemPath>sdl_gfx/SDL_imageFilter.c</itemPath>
+      <itemPath>sdl_gfx/SDL_imageFilter.h</itemPath>
+      <itemPath>sdl_gfx/SDL_rotozoom.c</itemPath>
+      <itemPath>sdl_gfx/SDL_rotozoom.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="SourceFiles"
+                   displayName="Source Files"
+                   projectFiles="true">
+      <logicalFolder name="ui" displayName="ui" projectFiles="true">
+        <itemPath>src/ui/main_menu_ui.cpp</itemPath>
+        <itemPath>src/ui/startup_splash_ui.cpp</itemPath>
+        <itemPath>src/ui/startup_ui.cpp</itemPath>
+      </logicalFolder>
+      <itemPath>src/config_file.cpp</itemPath>
+      <itemPath>src/config_manager.cpp</itemPath>
+      <itemPath>src/controller.cpp</itemPath>
+      <itemPath>src/game_engine.cpp</itemPath>
+      <itemPath>src/game_engine_collision.cpp</itemPath>
+      <itemPath>src/game_engine_draw.cpp</itemPath>
+      <itemPath>src/game_engine_gameplay.cpp</itemPath>
+      <itemPath>src/game_engine_joystick.cpp</itemPath>
+      <itemPath>src/game_engine_misc.cpp</itemPath>
+      <itemPath>src/game_engine_resource.cpp</itemPath>
+      <itemPath>src/game_engine_sound.cpp</itemPath>
+      <itemPath>src/game_engine_view.cpp</itemPath>
+      <itemPath>src/game_math.cpp</itemPath>
+      <itemPath>src/game_object.cpp</itemPath>
+      <itemPath>src/lua_object.cpp</itemPath>
+      <itemPath>src/main.cpp</itemPath>
+      <itemPath>src/map_parser.cpp</itemPath>
+      <itemPath>src/message_log.cpp</itemPath>
+      <itemPath>src/misc.cpp</itemPath>
+      <itemPath>src/player_paddle.cpp</itemPath>
+      <itemPath>src/pong_ball.cpp</itemPath>
+      <itemPath>src/text.cpp</itemPath>
+      <itemPath>src/text_menu.cpp</itemPath>
+      <itemPath>src/tile.cpp</itemPath>
+    </logicalFolder>
+    <logicalFolder name="sqlite" displayName="sqlite" projectFiles="true">
+      <itemPath>sqlite/sqlite3.c</itemPath>
+      <itemPath>sqlite/sqlite3.h</itemPath>
+    </logicalFolder>
+    <logicalFolder name="TestFiles"
+                   displayName="Test Files"
+                   projectFiles="false"
+                   kind="TEST_LOGICAL_FOLDER">
+    </logicalFolder>
+    <logicalFolder name="ExternalFiles"
+                   displayName="Important Files"
+                   projectFiles="false"
+                   kind="IMPORTANT_FILES_FOLDER">
+      <itemPath>Makefile</itemPath>
+    </logicalFolder>
+  </logicalFolder>
+  <sourceRootList>
+    <Elem>.</Elem>
+  </sourceRootList>
+  <projectmakefile>Makefile</projectmakefile>
+  <confs>
+    <conf name="Debug" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>GNU|GNU</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <incDir>
+            <pElem>/usr/include/SDL</pElem>
+          </incDir>
+        </cTool>
+        <ccTool>
+          <incDir>
+            <pElem>include</pElem>
+            <pElem>include/ui</pElem>
+            <pElem>src</pElem>
+            <pElem>src/ui</pElem>
+            <pElem>lua</pElem>
+            <pElem>sdl_gfx</pElem>
+            <pElem>sqlite</pElem>
+            <pElem>/usr/include/SDL</pElem>
+          </incDir>
+        </ccTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerOptionItem>-lSDL_image</linkerOptionItem>
+            <linkerOptionItem>-lSDL_ttf</linkerOptionItem>
+            <linkerOptionItem>-lSDL_mixer</linkerOptionItem>
+            <linkerOptionItem>-lpthread</linkerOptionItem>
+            <linkerOptionItem>-ldl</linkerOptionItem>
+            <linkerOptionItem>`sdl-config --libs`</linkerOptionItem>
+          </linkerLibItems>
+        </linkerTool>
+      </compileType>
+    </conf>
+    <conf name="Release" type="1">
+      <toolsSet>
+        <remote-sources-mode>LOCAL_SOURCES</remote-sources-mode>
+        <compilerSet>default</compilerSet>
+      </toolsSet>
+      <compileType>
+        <cTool>
+          <developmentMode>5</developmentMode>
+        </cTool>
+        <ccTool>
+          <developmentMode>5</developmentMode>
+        </ccTool>
+        <fortranCompilerTool>
+          <developmentMode>5</developmentMode>
+        </fortranCompilerTool>
+        <asmTool>
+          <developmentMode>5</developmentMode>
+        </asmTool>
+      </compileType>
+    </conf>
+  </confs>
+</configurationDescriptor>

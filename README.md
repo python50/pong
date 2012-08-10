@@ -15,6 +15,10 @@
 
 This project is licensed under the GNU GPLv3, See LICENCE.md for details
 
+### Building PONG
+
+Type `make` to build PONG
+
 ### Credits, libraries used, etc.
 
 See CREDITS.md

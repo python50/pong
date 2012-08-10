@@ -105,7 +105,9 @@ Source code ONLY:\n\
         Released under the GPLv3 License\n\
 Music by a varity of people including:\n\
         gr0gg0, lemonade, maxuser6000, CrizZ,\n\
-        rhodes, demosausje, Steam, Elwood";
+        rhodes, demosausje, Steam, Elwood\n\
+Be sure to send them a shout for making such\n\
+Good Stuff.";
 
     quit_text=
 "Leaving so soon ?";

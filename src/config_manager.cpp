@@ -1,4 +1,5 @@
 #include "config_manager.h"
+#include "stdio.h"
 
 config_manager::config_manager(string filename_)
 {
