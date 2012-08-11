@@ -35,8 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/lua/lfs.o \
 	${OBJECTDIR}/src/game_engine.o \
+	${OBJECTDIR}/lua/lfs.o \
 	${OBJECTDIR}/lua/lstate.o \
 	${OBJECTDIR}/lua/lcode.o \
 	${OBJECTDIR}/src/main.o \
@@ -66,20 +66,20 @@ OBJECTFILES= \
 	${OBJECTDIR}/src/game_engine_misc.o \
 	${OBJECTDIR}/lua/loslib.o \
 	${OBJECTDIR}/src/ui/startup_ui.o \
-	${OBJECTDIR}/lua/lgc.o \
 	${OBJECTDIR}/lua/lzio.o \
+	${OBJECTDIR}/lua/lgc.o \
 	${OBJECTDIR}/lua/lopcodes.o \
 	${OBJECTDIR}/lua/liolib.o \
-	${OBJECTDIR}/lua/ldo.o \
 	${OBJECTDIR}/lua/lundump.o \
+	${OBJECTDIR}/lua/ldo.o \
 	${OBJECTDIR}/src/misc.o \
 	${OBJECTDIR}/lua/lobject.o \
 	${OBJECTDIR}/lua/lbaselib.o \
 	${OBJECTDIR}/sdl_gfx/SDL_imageFilter.o \
 	${OBJECTDIR}/lua/lmem.o \
 	${OBJECTDIR}/src/map_parser.o \
-	${OBJECTDIR}/lua/ldump.o \
 	${OBJECTDIR}/src/config_manager.o \
+	${OBJECTDIR}/lua/ldump.o \
 	${OBJECTDIR}/src/ui/startup_splash_ui.o \
 	${OBJECTDIR}/lua/lstring.o \
 	${OBJECTDIR}/sqlite/sqlite3.o \
@@ -125,15 +125,15 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pong: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/pong ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/lua/lfs.o: lua/lfs.c 
-	${MKDIR} -p ${OBJECTDIR}/lua
-	${RM} $@.d
-	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/lfs.o lua/lfs.c
-
 ${OBJECTDIR}/src/game_engine.o: src/game_engine.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -Iinclude/ui -Isrc -Isrc/ui -Ilua -Isdl_gfx -Isqlite -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/game_engine.o src/game_engine.cpp
+
+${OBJECTDIR}/lua/lfs.o: lua/lfs.c 
+	${MKDIR} -p ${OBJECTDIR}/lua
+	${RM} $@.d
+	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/lfs.o lua/lfs.c
 
 ${OBJECTDIR}/lua/lstate.o: lua/lstate.c 
 	${MKDIR} -p ${OBJECTDIR}/lua
@@ -280,15 +280,15 @@ ${OBJECTDIR}/src/ui/startup_ui.o: src/ui/startup_ui.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -Iinclude/ui -Isrc -Isrc/ui -Ilua -Isdl_gfx -Isqlite -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/ui/startup_ui.o src/ui/startup_ui.cpp
 
-${OBJECTDIR}/lua/lgc.o: lua/lgc.c 
-	${MKDIR} -p ${OBJECTDIR}/lua
-	${RM} $@.d
-	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/lgc.o lua/lgc.c
-
 ${OBJECTDIR}/lua/lzio.o: lua/lzio.c 
 	${MKDIR} -p ${OBJECTDIR}/lua
 	${RM} $@.d
 	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/lzio.o lua/lzio.c
+
+${OBJECTDIR}/lua/lgc.o: lua/lgc.c 
+	${MKDIR} -p ${OBJECTDIR}/lua
+	${RM} $@.d
+	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/lgc.o lua/lgc.c
 
 ${OBJECTDIR}/lua/lopcodes.o: lua/lopcodes.c 
 	${MKDIR} -p ${OBJECTDIR}/lua
@@ -300,15 +300,15 @@ ${OBJECTDIR}/lua/liolib.o: lua/liolib.c
 	${RM} $@.d
 	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/liolib.o lua/liolib.c
 
-${OBJECTDIR}/lua/ldo.o: lua/ldo.c 
-	${MKDIR} -p ${OBJECTDIR}/lua
-	${RM} $@.d
-	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/ldo.o lua/ldo.c
-
 ${OBJECTDIR}/lua/lundump.o: lua/lundump.c 
 	${MKDIR} -p ${OBJECTDIR}/lua
 	${RM} $@.d
 	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/lundump.o lua/lundump.c
+
+${OBJECTDIR}/lua/ldo.o: lua/ldo.c 
+	${MKDIR} -p ${OBJECTDIR}/lua
+	${RM} $@.d
+	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/ldo.o lua/ldo.c
 
 ${OBJECTDIR}/src/misc.o: src/misc.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
@@ -340,15 +340,15 @@ ${OBJECTDIR}/src/map_parser.o: src/map_parser.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -Iinclude/ui -Isrc -Isrc/ui -Ilua -Isdl_gfx -Isqlite -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/map_parser.o src/map_parser.cpp
 
-${OBJECTDIR}/lua/ldump.o: lua/ldump.c 
-	${MKDIR} -p ${OBJECTDIR}/lua
-	${RM} $@.d
-	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/ldump.o lua/ldump.c
-
 ${OBJECTDIR}/src/config_manager.o: src/config_manager.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src
 	${RM} $@.d
 	$(COMPILE.cc) -g -Iinclude -Iinclude/ui -Isrc -Isrc/ui -Ilua -Isdl_gfx -Isqlite -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/src/config_manager.o src/config_manager.cpp
+
+${OBJECTDIR}/lua/ldump.o: lua/ldump.c 
+	${MKDIR} -p ${OBJECTDIR}/lua
+	${RM} $@.d
+	$(COMPILE.c) -g -I/usr/include/SDL -MMD -MP -MF $@.d -o ${OBJECTDIR}/lua/ldump.o lua/ldump.c
 
 ${OBJECTDIR}/src/ui/startup_splash_ui.o: src/ui/startup_splash_ui.cpp 
 	${MKDIR} -p ${OBJECTDIR}/src/ui

@@ -39,7 +39,7 @@
 void game_engine::game_init()
 {
     gameplay.counter=0;
-    gameplay.score_limit=5;
+    gameplay.score_limit=1;
     gameplay.state=GAME_START;
 
     music_play("game_play",-1);
@@ -179,7 +179,7 @@ void game_engine::game_logic_win0()
         Uint8 *keystate = SDL_GetKeyState(NULL);
         if (keystate[SDLK_SPACE] or keystate[SDLK_RETURN])
         {
-            gameplay.state=GAME_START;
+            gameplay.state=GAME_OVER;
             remove_object("win-text");
             gameplay.counter=0;
 
@@ -221,7 +221,7 @@ void game_engine::game_logic_win1()
         Uint8 *keystate = SDL_GetKeyState(NULL);
         if (keystate[SDLK_SPACE] or keystate[SDLK_RETURN])
         {
-            gameplay.state=GAME_START;
+            gameplay.state=GAME_OVER;
             remove_object("win-text");
             gameplay.counter=0;
 
@@ -229,6 +229,14 @@ void game_engine::game_logic_win1()
             music_play("game_play", -1);
         }
     }
+}
+
+void game_engine::game_logic_over()
+{
+	//clear_objects();
+	music_stop();
+	music_play("startup",-1);
+	load_map("./data/map/menu/main.lua");
 }
 
 void game_engine::game_logic()
@@ -248,6 +256,9 @@ void game_engine::game_logic()
 
     if (gameplay.state==GAME_WIN1)
         game_logic_win1();
+    
+    if (gameplay.state==GAME_OVER)
+        game_logic_over();
 }
 
 void game_engine::game_score(int player_number, int points)

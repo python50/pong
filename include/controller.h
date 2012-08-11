@@ -38,65 +38,65 @@
 
 class controller
 {
-    public:
-        controller();
+public:
+	controller();
 
-        virtual void call(std::string item, bool &value);
-        virtual void call(std::string item, int &value);
-        virtual void call(std::string item, float &value);
-        virtual void call(std::string item, std::string &value);
-        virtual void get(std::string item, std::string &return_value);
-        virtual void get(std::string item, bool &return_value);
-        virtual void get(std::string item, int &return_value);
-        virtual void get(std::string item, float &return_value);
-        virtual void set(std::string item, bool &value);
-        virtual void set(std::string item, int &value);
-        virtual void set(std::string item, float &value);
-        virtual void set(std::string item, std::string &value);
-        virtual void update();
-        virtual void init();
-        virtual void reset();
-        virtual void pause();
-        virtual void unpause();
-        virtual ~controller();
+	virtual void call(std::string item, bool &value);
+	virtual void call(std::string item, int &value);
+	virtual void call(std::string item, float &value);
+	virtual void call(std::string item, std::string &value);
+	virtual void get(std::string item, std::string &return_value);
+	virtual void get(std::string item, bool &return_value);
+	virtual void get(std::string item, int &return_value);
+	virtual void get(std::string item, float &return_value);
+	virtual void set(std::string item, bool &value);
+	virtual void set(std::string item, int &value);
+	virtual void set(std::string item, float &value);
+	virtual void set(std::string item, std::string &value);
+	virtual bool update();
+	virtual void init();
+	virtual void reset();
+	virtual void pause();
+	virtual void unpause();
+	virtual ~controller();
 
+	std::string get_id()
+	{
+		return id_type;
+	}
 
-        std::string get_id()
-        {
-            return id_type;
-        }
+	void set_id(std::string id)
+	{
+		id_type=id;
+	}
 
-        void set_id(std::string id)
-        {
-            id_type=id;
-        }
+	bool get_delete()
+	{
+		return delete_this;
+	}
 
-        bool get_delete()
-        {
-            return delete_this;
-        }
+	void set_delete(bool value)
+	{
+		delete_this=value;
+	}
 
-        void set_delete(bool value)
-        {
-            delete_this=value;
-        }
+	bool persistant;
+	bool no_collide;
+	SDL_Rect rect;
+	std::string id_type;
+	float x, y, z;
 
-        bool delete_this;
-        bool persistant;
-        bool no_collide;
-        SDL_Rect rect;
-        std::string id_type;
-        float x,y,z;
+	//default values
 
-        //default values
+	const static bool default_x=0;
+	const static bool default_y=0;
+	const static bool default_z=0;
 
-        const static bool default_x=0;
-        const static bool default_y=0;
-        const static bool default_z=0;
-
-    protected:
-    private:
-        virtual void draw();
-};
+protected:
+	bool delete_this;
+	
+private:
+	virtual void draw();
+} ;
 
 #endif // CONTROLLER_H

@@ -71,7 +71,7 @@ enum textquality
 
 
 
-enum game_state { GAME_START, GAME_PLAYING, GAME_PAUSED, GAME_WIN0, GAME_WIN1 };
+enum game_state { GAME_START, GAME_PLAYING, GAME_PAUSED, GAME_WIN0, GAME_WIN1, GAME_OVER };
 
 struct video_information
 {
@@ -308,6 +308,7 @@ class game_engine
         void game_logic_pause();
         void game_logic_win0();
         void game_logic_win1();
+        void game_logic_over();
 
         engine_state state;
         video_information video;

@@ -155,7 +155,7 @@ public:
     /*!
         \brief Update text, eg. draw to screen, render a new surface if render_text has changed
      */
-    void update();
+    bool update();
     virtual ~text();
 protected:
 private:

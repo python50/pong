@@ -40,7 +40,7 @@ class startup_ui : public controller
 {
     public:
         startup_ui(game_engine * gm_engine);
-        void update();
+        bool update();
         virtual ~startup_ui();
     protected:
     private:

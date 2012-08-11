@@ -58,7 +58,7 @@ class tile : public game_object
 {
     public:
         tile(game_engine * gengine,float x, float y, float z, std::string image, std::string id="");
-        virtual void update();
+        virtual bool update();
         virtual void call(std::string item, bool &value);
         virtual void call(std::string item, int &value);
         virtual void call(std::string item, float &value);

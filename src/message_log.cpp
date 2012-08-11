@@ -33,9 +33,31 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdarg.h>
 #include <time.h>
 
 //using namespace std;
+
+message_log::message_log (const char * type, const char * format, ...)
+{
+
+    va_list ap1;
+
+    va_start(ap1, format);
+
+	
+	// Need to append the message type in a standard way
+	char new_message[4096];
+	vsprintf(new_message, format, ap1);
+	
+	char log_message[4096];
+    sprintf(log_message, "%s: %s", type, new_message);
+	
+	log(log_message);
+
+    va_end(ap1);
+}
+
 
 message_log::message_log(message_level level,std::string message)
 {
@@ -132,7 +154,7 @@ void message_log::log(std::string message)
 
     FILE *log;
     log=fopen("error.log", "a");
-    fprintf(log,message.c_str());// "Hello\ns", message.c_str());
+    fprintf(log,message.c_str());
     printf("%s",message.c_str());
     fclose(log);
 }

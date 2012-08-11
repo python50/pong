@@ -85,6 +85,7 @@ enum message_level
 class message_log
 {
     public:
+		message_log(const char * type, const char * format, ...);
         message_log(message_level level , std::string message);
         virtual ~message_log();
     protected:

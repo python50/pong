@@ -311,12 +311,13 @@ void text_menu::set(std::string item, std::string &value)
         font=value;
 }
 
-void text_menu::update()
+bool text_menu::update()
 {
     if (!draw_mode)
         gm_engine->blit(x,y+(selected*pitch),cursor,BLIT_DYNAMIC);
     else
         gm_engine->blit(x,y+(selected*pitch),cursor,BLIT_ABSOLUTE);
+	return delete_this;
 }
 
 text_menu::~text_menu()

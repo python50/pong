@@ -47,7 +47,7 @@ class lua_object : public controller
 {
     public:
         lua_object(game_engine * gm_engine, std::string filename, float x, float y, float z=0);
-        void update();
+        bool update();
         virtual ~lua_object();
     protected:
     private:

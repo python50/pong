@@ -12,7 +12,7 @@
 screen_width=640;
 screen_height=480;
 
-fullscreen=1;	--1= Fullscreen, hardware acceleration (Fast !)
+fullscreen=0;	--1= Fullscreen, hardware acceleration (Fast !)
 		--0= Windowed, software only (Slow !)
 
 double_buffer=0; --Prevents graphical tearing, Slows down program drawing.

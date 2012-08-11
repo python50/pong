@@ -35,11 +35,7 @@
 
 text::text(game_engine * gm_engine_, std::string id, float xx, float yy, std::string font_, std::string ntext, bool drawmode)
 {
-
-    new message_log(MESSAGE_DEBUG3,"text created, id:`"+id+
-                    "` x:"+convert_int_string(xx)+
-                    " y:"+convert_int_string(yy)+
-                    " font:`"+font_+"` text:`"+ntext+"`");
+	new message_log("Object Creation","type: `text` id: `%s` x: %d y: %d font: `%s`", id.c_str(), xx, yy, font_.c_str());
 
     id_type=id;
     font=font_;
@@ -247,7 +243,7 @@ std::vector<std::string> text::process_text(std::string text_)
     return new_text;
 }
 
-void text::update()
+bool text::update()
 {
     if (change)
         render();
@@ -318,6 +314,8 @@ void text::update()
             gm_engine->blit(x_tmp,y_tmp+(i*ptsize),sprite_forground.at(i),mode);
         }
     }
+	
+	return delete_this;
 }
 
 text::~text()
@@ -328,5 +326,5 @@ text::~text()
     }
     sprite_forground.clear();
 */
-    new message_log(MESSAGE_DEBUG4,"Text Object Destroyed, id:`"+id_type+"`");
+    new message_log("Object Destruction","type: `text` id: %s", id_type.c_str());
 }

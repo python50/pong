@@ -152,7 +152,7 @@ class text_menu : public controller
         /**
             \brief Update text, eg. draw to screen, render a new surface if render_text has changed
          */
-        void update();
+        bool update();
 
         ~text_menu();
     protected:

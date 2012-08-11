@@ -48,22 +48,23 @@ startup_splash_ui::startup_splash_ui(game_engine * gm_engine_)
     background=gm_engine->get_surface("background-splash");
 }
 
-void startup_splash_ui::update()
+bool startup_splash_ui::update()
 {
     counter++;
     if (counter > 60)
     {
         load_next();
-        return;
+        return delete_this;
     }
 
     Uint8 *keystate = SDL_GetKeyState(NULL);
     if (keystate[SDLK_SPACE] || keystate[SDLK_RETURN] )
     {
         load_next();
-        return ;
+        bool delete_this;
     }
     gm_engine->blit(0,0,background,BLIT_ABSOLUTE);
+	return delete_this;
 }
 
 void startup_splash_ui::load_next()

@@ -106,8 +106,7 @@ Source code ONLY:\n\
 Music by a varity of people including:\n\
         gr0gg0, lemonade, maxuser6000, CrizZ,\n\
         rhodes, demosausje, Steam, Elwood\n\
-Be sure to send them a shout for making such\n\
-Good Stuff.";
+Be sure to thank them for making such good stuff";
 
     quit_text=
 "Leaving so soon ?";
@@ -115,11 +114,14 @@ Good Stuff.";
     menu=new text_menu(gm_engine,"main-menu",5,100,46,"jura_bold-34","cursor-48",0,1);
 
     gm_engine->add_object(new text(gm_engine, "copyright-text", 0, 0, "jura_medium-12",
-"Copyright 2012 (C) Jason White\n\
+"PONG Copyright 2012 (C) Jason White\n\
 V0.12 - 8/1/2012\n\
-Development", 1));
+Development Version\n\
+Program licenced under the GNU GPLv3", 1));
+    
     gm_engine->add_object(new text(gm_engine, "title-text", 150, 50, "jura_bold-48","PONG",1));
     gm_engine->add_object(new text(gm_engine, "info-text", 165, 100, "jura_medium-24", start_text, 1));
+  
     int value=0;
     gm_engine->get_object("info-text")->set("font_red",value);
     gm_engine->get_object("info-text")->set("font_blue",value);
@@ -269,8 +271,7 @@ void main_menu_ui::do_menu_item(int selected)
         new message_log(MESSAGE_DEBUG4,"main_menu_ui: menu selection out of range `"+convert_int_string(selected)+"`");
     }
 }
-
-void main_menu_ui::update()
+bool main_menu_ui::update()
 {
     counter++;
 
@@ -326,6 +327,19 @@ void main_menu_ui::update()
         }
 
     }
+	
+	int selection;
+	menu->get("selected",selection);
+	if (selection==2)
+		config_menu();
+	
+	
+	return delete_this;
+}
+
+void main_menu_ui::config_menu()
+{
+	
 }
 
 main_menu_ui::~main_menu_ui()

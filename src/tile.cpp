@@ -63,9 +63,10 @@ tile::tile(game_engine *g_engine,float xx, float yy, float zz, std::string image
     no_collide=1;
 }
 
-void tile::update()
+bool tile::update()
 {
     gm_engine->blit(x,y,sprite);
+	return delete_this;
 }
 
 

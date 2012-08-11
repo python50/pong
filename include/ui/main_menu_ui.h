@@ -43,13 +43,15 @@ class main_menu_ui : public controller
 {
     public:
         main_menu_ui(game_engine * gm_engine);
-        void update();
+        bool update();
         virtual ~main_menu_ui();
     protected:
     private:
         void create_game();
         void set_screen_text(int position);
         void do_menu_item(int position);
+		void config_menu();
+		
         game_engine * gm_engine;
 
         text_menu * menu;

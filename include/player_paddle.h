@@ -43,7 +43,7 @@ class player_paddle : public controller
         player_paddle(game_engine * gm_engine, float x, float y, int player_number);
         virtual void call(std::string item, bool &value);
         virtual void get(std::string item, float &return_value);
-        virtual void update();
+        virtual bool update();
         virtual ~player_paddle();
     protected:
     private:

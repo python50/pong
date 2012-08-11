@@ -42,7 +42,7 @@ class pong_ball : public controller
         pong_ball(game_engine * gm_engine_, float x_, float y_,float speed_);
         virtual void call(std::string item, bool &value);
         virtual void get(std::string item, float &return_value);
-        void update();
+        bool update();
         virtual ~pong_ball();
     private:
         void collision();

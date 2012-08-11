@@ -84,14 +84,14 @@ void pong_ball::get(std::string item, float &return_value)
         return_value=z;
 }
 
-void pong_ball::update()
+bool pong_ball::update()
 {
     gm_engine->game_logic();
 
     if (gm_engine->game_get_state()==GAME_PLAYING)
         x;
     else
-        return;
+        return delete_this;
 
     collision();
 
@@ -104,6 +104,8 @@ void pong_ball::update()
     rect.y=y-rect.h/2;
 
     gm_engine->blit(rect.x,rect.y,sprite, BLIT_ABSOLUTE);
+	
+	return delete_this;
 }
 
 void pong_ball::collision()

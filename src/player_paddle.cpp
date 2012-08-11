@@ -128,17 +128,19 @@ void player_paddle::collision()
         y=gm_engine->view_get().h-rect.h/2;
 }
 
-void player_paddle::update()
+bool player_paddle::update()
 {
     if (gm_engine->game_get_state()==GAME_PLAYING)
         x;
     else
-        return;
+        return delete_this;
 
     event();
     collision();
 
     gm_engine->blit(rect.x,rect.y,sprite,BLIT_ABSOLUTE);
+	
+	return delete_this;
 }
 
 player_paddle::~player_paddle()

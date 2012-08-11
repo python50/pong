@@ -40,7 +40,7 @@ class startup_splash_ui : public controller
 {
     public:
         startup_splash_ui(game_engine * gm_engine);
-        void update();
+        bool update();
         virtual ~startup_splash_ui();
     protected:
     private:

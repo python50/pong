@@ -102,14 +102,16 @@ int main()
         if (counter > 59)
         {
             counter=0;
-            printf("fps: %f (%f)\n", fps_average, fps);
+			new message_log("FPS" ,"%f (%f)", fps_average, fps);
         }
 
         controller * fps_text = engine->get_object("fps-text");
         if (fps_text==NULL)
         {
-            fps_text=new text(engine,"fps-text",0,0,"jura_medium-18","",BLIT_ABSOLUTE);
+            fps_text=new text(engine,"fps-text",625,0,"jura_medium-12","",BLIT_ABSOLUTE);
             engine->add_object(fps_text);
+            int value=0xFF;
+            engine->get_object("fps-text")->set("font_green",value);
         }
 
         string text=convert_int_string(fps_average);
