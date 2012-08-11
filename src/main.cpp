@@ -59,11 +59,10 @@ Include Template
 
 #include "config_manager.h"
 
-int main()
-{
-    //config_manager config("settings.sqlite");
-    //cout << config.get_setting_string("foo") << "\n";
-
+int main(){
+    //config_manager config("data/settings.sqlite");
+	//config.set_setting_int("int", "Settings",100);
+    //cout << config.get_setting_int("int", "Settings") << "\n";
 
     new message_log(MESSAGE_EVENT,"WWSiGE Loading");
 

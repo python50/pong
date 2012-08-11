@@ -39,7 +39,7 @@
 void game_engine::game_init()
 {
     gameplay.counter=0;
-    gameplay.score_limit=1;
+    gameplay.score_limit=5;
     gameplay.state=GAME_START;
 
     music_play("game_play",-1);
